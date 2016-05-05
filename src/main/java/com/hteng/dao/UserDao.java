@@ -1,9 +1,6 @@
 package com.hteng.dao;
 
 import com.hteng.entity.User;
-import org.springframework.data.repository.CrudRepository;
-
-import javax.transaction.Transactional;
 
 /**
  * 开发者：JimmyZhang
@@ -11,7 +8,7 @@ import javax.transaction.Transactional;
  * Copyright (C) 2016 华腾科技有限公司
  * 版权所有
  */
-@Transactional
-public interface UserDao extends CrudRepository<User, Long> {
+
+public interface UserDao{
     public User findByEmail(String email);
 }
