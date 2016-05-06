@@ -19,7 +19,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
  * Copyright (C) 2016 华腾科技有限公司
  * 版权所有
  */
-@Controller
+@RestController
 @RequestMapping("/test")
 public class UserController {
 
