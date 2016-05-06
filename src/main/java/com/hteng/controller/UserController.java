@@ -2,7 +2,6 @@ package com.hteng.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.hteng.DbOperation.IUserOperation;
-import com.hteng.dao.UserDao;
 import com.hteng.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +19,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
  * 版权所有
  */
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/api")
 public class UserController {
 
     @Autowired
@@ -44,5 +43,15 @@ public class UserController {
        return JSON.toJSONString(user);
     }
 
+    @RequestMapping(value = "/login/{name}/{password}", method = GET)
+    public String login(@PathVariable String name,@PathVariable String password) {
+        User user = null;
+        try{
+            user = userDao.loginUser(name,password);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
+        return JSON.toJSONString(user);
+    }
 
 }

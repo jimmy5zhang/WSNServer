@@ -9,5 +9,8 @@
        select * from mysql.users mu where mu.id = #{id}
     </select>
 
+    <select id="loginUser" parameterType="java.lang.Object" resultType="User">
+        select * from mysql.users mu where mu.name = #{0} and mu.password = #{1}
+    </select>
 
 </mapper>

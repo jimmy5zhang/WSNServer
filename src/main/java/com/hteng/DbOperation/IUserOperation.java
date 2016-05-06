@@ -12,5 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public interface IUserOperation {
 
-    User selectUser(int id);
+   public User selectUser(int id);
+
+   public User loginUser(String name,String password);
 }
