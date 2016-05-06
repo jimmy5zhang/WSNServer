@@ -11,22 +11,22 @@ import java.util.List;
  */
 public class BaseResponse implements Serializable {
 
-    private int errorCode;
-    private String errorMessage;
+    private int responseCode;
+    private String responseMessage;
 
-    public int getErrorCode() {
-        return errorCode;
+    public int getResponseCode() {
+        return responseCode;
     }
 
-    public void setErrorCode(int errorCode) {
-        this.errorCode = errorCode;
+    public void setResponseCode(int responseCode) {
+        this.responseCode = responseCode;
     }
 
-    public String getErrorMessage() {
-        return errorMessage;
+    public String getResponseMessage() {
+        return responseMessage;
     }
 
-    public void setErrorMessage(String errorMessage) {
-        this.errorMessage = errorMessage;
+    public void setResponseMessage(String responseMessage) {
+        this.responseMessage = responseMessage;
     }
 }
